@@ -12,7 +12,8 @@ const HOST=process.env.DB_HOST
 const sequelize = new Sequelize(DATABASE, USERNAME, PASSWORD, {
     host: HOST,
     dialect: 'mysql',
-    logging: winston.info.bind(winston)
+    // logging: winston.info.bind(winston),
+    logging: false
 });
 
 sequelize.authenticate().then(() => {

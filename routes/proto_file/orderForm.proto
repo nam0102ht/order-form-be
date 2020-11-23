@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package orderForm;
+
+import "google/protobuf/descriptor.proto";
+
+service OrderForm {
+  // Provides a value for each key request
+  rpc Order (stream Request) returns (stream Response) {}
+}
+
+// The request message containing the key
+message Request {
+  string key = 1;
+  string productId = 2;
+  string name = 3;
+  string amount = 4;
+  int32 number = 5;
+  string token = 6;
+}
+
+// The response message containing the value associated with the key
+message Response {
+  string status = 1;
+  string message = 2;
+}
