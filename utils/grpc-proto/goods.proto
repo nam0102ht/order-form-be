@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package goodspackage;
+
+// A simple key-value storage service
+service Goods {
+  // Provides a value for each key request
+  rpc addPurchase (stream Request) returns (stream Response) {}
+}
+
+message Data {
+    string id = 1;
+    string name = 2;
+    string categoryID = 3;
+}
+
+// The request message containing the key
+message Request {
+  string status = 1;
+  string message = 2;
+  Data data = 3;
+}
+
+// The response message containing the value associated with the key
+message Response {
+  string status = 1;
+  string message = 2;
+  Data data = 3;
+}

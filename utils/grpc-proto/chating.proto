@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package chattingpackage;
+
+// A simple key-value storage service
+service Chating {
+  // chating
+  rpc chating (stream Request) returns (stream Response) {}
+
+  // Upload images 
+  rpc uploadImages (stream Request) returns (stream Response) {}
+}
+
+
+message UploadImageRequest{
+    AuthToken auth = 1;
+    FileType image_format = 2;
+    bytes image = 3;
+}
+
+message Data {
+    string id = 1;
+    string message = 2;
+}
+
+// The request message containing the key
+message Request {
+  string status = 1;
+  string message = 2;
+  Data data = 3;
+}
+
+// The response message containing the value associated with the key
+message Response {
+  string status = 1;
+  string message = 2;
+  Data data = 3;
+}
