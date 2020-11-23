@@ -26,7 +26,12 @@ message Pong {
 }
 
 message Request {
-    string username = 1;
+  string key = 1;
+  string productId = 2;
+  string name = 3;
+  string amount = 4;
+  int32 number = 5;
+  string token = 6;
 }
 
 // The response message containing the value associated with the key
