@@ -14,6 +14,8 @@ const type =  require("./routes/types")
 const orderFormLoader = require("./routes/orderFormLoader")
 const cors = require('cors')
 const grpc = require('@grpc/grpc-js')
+const grpcClient = require("./routes/GrpcRoutes")
+const async = require('async')
 require("dotenv").config()
 
 const PORT = process.env.SERVER_PORT
@@ -41,10 +43,15 @@ app.listen(PORT, () => {
     server.addService(orderFormProto.OrderForm.service, {
         order: orderFormLoader.order
     });
+
+    grpcClient.ping();
+
     server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), () => {
         logger.info("---------START-GRPC---------")
         server.start()
         logger.info("Grpc is running at port "+50051)
         logger.info("-------------------------------")
-    });
+    })
+
+    
 })

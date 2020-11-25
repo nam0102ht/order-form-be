@@ -1,14 +1,14 @@
 syntax = "proto3";
 
-package authCheck;
+package AuthCheck;
 
-service authCheck {
+service AuthCheck {
   // Provides a value for each key request
   rpc countCheck (stream Request) returns (stream Response) {}
   // Remove count check when login success
-  rpc removeCountCheck (Request) return (Response) {}
+  rpc removeCountCheck (Request) returns (Response) {}
   // heath check
-  rpc heathCheck (stream Ping) return (stream Pong) {}
+  rpc heathCheck (stream Ping) returns (stream Pong) {}
 }
 
 // The request message containing the key
@@ -26,7 +26,12 @@ message Pong {
 }
 
 message Request {
-    string username = 1;
+  string key = 1;
+  string productId = 2;
+  string name = 3;
+  string amount = 4;
+  int32 number = 5;
+  string token = 6;
 }
 
 // The response message containing the value associated with the key
