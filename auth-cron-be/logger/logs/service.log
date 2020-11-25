@@ -1,0 +1,15 @@
+[2020-11-15 00:40:13] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:13] [[31merror[39m] SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (C:\Users\Nam\Documents\GitHub\order-form-be\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-11-15 00:40:14] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:14] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:15] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:16] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:17] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:20] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:25] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-15 00:40:33] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-20 18:18:23] [[31merror[39m] SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (/Users/nam.nguyen4/Documents/order-form/order-form-be/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:116:17)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
