@@ -130,6 +130,15 @@ module.exports = {
             }
         })
     },
+    unblockByUsername: async username => {
+        return await User.update({
+            isBlock: false
+        }, {
+            where: {
+                username: username
+            }
+        })
+    },
     addToGroup: async (userId, groupId) => {
         return await UserGroup.create({
             userId: userId,

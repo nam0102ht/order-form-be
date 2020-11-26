@@ -1,16 +1,16 @@
 const AuthService = require("../../service/AuthService")
 const logger = require("../../logger/winston")
 const backendErr = require("../../utils/backendError")
-const jwt = require("jsonwebtoken")
-const User = require("../../models/user/user")
-const UserService = require("../../service/UserService")
 require('dotenv').config()
-const fs = require("fs")
 const utils = require("../../utils/utils")
-const { error } = require("../../logger/winston")
+const GrpcRoutes = require("../../routes/GrpcRoutes")
+const { ping } = require("../../utils/connectRedis")
+const UserService = require("../../service/UserService")
+
 
 exports.login = async (req, res) => {
     let body = req.body
+    let baseToken = Buffer.from(process.env.TOKEN_GRPC).toString('utf8').toString('base64')
     let response = {
         status: backendErr.success,
         message: "",
@@ -31,21 +31,36 @@ exports.login = async (req, res) => {
         res.send(response)
         return
     }
+
+    let userCheck = await UserService.findByUsername(username)
+    if(userCheck.isBlock) {
+        logger.info("User is blocked")
+        
+        let ping = {
+            username: username,
+            token: baseToken
+        }
+        GrpcRoutes.getDate(ping, password, res)
+        return
+    }
+
     let userLogin = await AuthService.login(username, password)
     if(!userLogin) {
-        logger.info("password is not null")
+        logger.info("password is'nt match")
         response.status = backendErr.passwordNotCorrect
         response.message = "Password isn't match"
+        let ping = {
+            username: username,
+            token: baseToken
+        }
+        GrpcRoutes.count(ping)
         res.send(response)
         return
     }
 
-    if(userLogin.isBlock) {
-        logger.info("password is not null")
-        response.status = backendErr.userIsBlock
-        response.message = "User is blocked"
-        res.send(response)
-        return
+    let ping = {
+        username: username,
+        token: baseToken
     }
 
     let token = await utils.generateJwtWithRsa(userLogin)

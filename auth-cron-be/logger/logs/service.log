@@ -13,3 +13,8 @@
 [2020-11-20 18:18:23] [[31merror[39m] SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
     at ConnectionManager.connect (/Users/nam.nguyen4/Documents/order-form/order-form-be/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:116:17)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-11-26 00:00:30] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ServerDuplexStreamImpl.Writable.write (_stream_writable.js:315:5)
+    at ServerDuplexStreamImpl.<anonymous> (C:\Users\Nam\Documents\GitHub\order-form-be\auth-cron-be\index.js:62:18)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
