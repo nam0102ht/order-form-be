@@ -31055,3 +31055,11 @@
     at InterceptingListener._callNext (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:568:42)
     at InterceptingListener.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:618:8)
     at C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1127:18
+[2020-11-26 10:32:33] [[31merror[39m] Error: 14 UNAVAILABLE: TCP Read failed
+    at Object.exports.createStatusError (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\common.js:91:15)
+    at ClientDuplexStream._emitStatusIfDone (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:233:26)
+    at ClientDuplexStream._receiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:211:8)
+    at Object.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1311:15)
+    at InterceptingListener._callNext (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:568:42)
+    at InterceptingListener.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:618:8)
+    at C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1127:18
