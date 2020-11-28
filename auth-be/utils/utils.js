@@ -54,42 +54,7 @@ let verifyToken = async (token) => {
 }
 
 let tokenFromHeader = async (req, res) => {
-    let headers = req.headers
-    if(!headers) {
-        res.send({
-            status: errorBackend.invalidParam,
-            message: "Headers is null",
-            data: {}
-        })
-        return ""
-    }
-    let token = headers.authorization
-    if(!token) {
-        res.send({
-            status: errorBackend.invalidParam,
-            message: "Token must have",
-            data: {}
-        })
-        return ""
-    }
-    let tokenBearer = token.split("Bearer ")
-    if(tokenBearer.length === 0) {
-        res.send({
-            status: errorBackend.invalidParam,
-            message: "Token is bad format",
-            data: {}
-        })
-        return ""
-    }
-    let jwtToken = tokenBearer[1]
-    let jsonRes = await verifyTokenClient(jwtToken)
-    if(!jsonRes) {
-        res.send({
-            status: errorBackend.invalidParam,
-            message: "Token is bad format"
-        })
-        return ""
-    }
+    let jsonRes = ""
     return jsonRes
 }
 
@@ -120,6 +85,46 @@ let verifyTokenClient = async (token) => {
     return await jwt.verify(token, PUBLIC_KEY_CLIENT)
 }
 
+let tokenFromHeaderCookies = async (req, res) => {
+    const token = req.cookies.token || '';
+    // if(!headers) {
+    //     res.send({
+    //         status: errorBackend.invalidParam,
+    //         message: "Headers is null",
+    //         data: {}
+    //     })
+    //     return ""
+    // }
+    // let token = headers.authorization
+    // if(!token) {
+    //     res.send({
+    //         status: errorBackend.invalidParam,
+    //         message: "Token must have",
+    //         data: {}
+    //     })
+    //     return ""
+    // }
+    // let tokenBearer = token.split("Bearer ")
+    // if(tokenBearer.length === 0) {
+    //     res.send({
+    //         status: errorBackend.invalidParam,
+    //         message: "Token is bad format",
+    //         data: {}
+    //     })
+    //     return ""
+    // }
+    // let jwtToken = tokenBearer[1]
+    // let jsonRes = await verifyTokenClient(jwtToken)
+    // if(!jsonRes) {
+    //     res.send({
+    //         status: errorBackend.invalidParam,
+    //         message: "Token is bad format"
+    //     })
+    //     return ""
+    // }
+    return token
+}
+
 module.exports = {
     hashPasswordBcrypt: hashPasswordBcrypt,
     checkPasswordBcrypt: checkPasswordBcrypt,
@@ -128,5 +133,6 @@ module.exports = {
     verifyToken: verifyToken,
     generateJwtWithRsaClient: generateJwtWithRsaClient,
     verifyTokenClient: verifyTokenClient,
-    tokenFromHeader: tokenFromHeader
+    tokenFromHeader: tokenFromHeader,
+    tokenFromHeaderCookies: tokenFromHeaderCookies
 }

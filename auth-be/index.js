@@ -16,13 +16,18 @@ const cors = require('cors')
 const grpc = require('@grpc/grpc-js')
 const grpcClient = require("./routes/GrpcRoutes")
 const async = require('async')
+const cookieParser = require("cookie-parser")
 require("dotenv").config()
 
 const PORT = process.env.SERVER_PORT
 
 // parse application/json
 app.use(bodyParser.json())
-app.use(cors({origin: 'http://localhost:3000',}))
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+}))
+app.use(cookieParser())
 
 userRoutes(app)
 groupRoutes(app)
@@ -51,7 +56,5 @@ app.listen(PORT, () => {
         server.start()
         logger.info("Grpc is running at port "+50051)
         logger.info("-------------------------------")
-    })
-
-    
+    })    
 })

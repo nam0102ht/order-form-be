@@ -7,7 +7,6 @@ const GrpcRoutes = require("../../routes/GrpcRoutes")
 const { ping } = require("../../utils/connectRedis")
 const UserService = require("../../service/UserService")
 
-
 exports.login = async (req, res) => {
     let body = req.body
     let baseToken = Buffer.from(process.env.TOKEN_GRPC).toString('utf8').toString('base64')
@@ -64,7 +63,13 @@ exports.login = async (req, res) => {
     }
 
     let token = await utils.generateJwtWithRsa(userLogin)
+
     return res.send({...response, message: "Success", data: {
         token: token
     }})
 }
+
+exports.getProfile =async (req, res) => {
+    let user = await utils.tokenFromHeader(req, res)
+    res.send(user)
+} 

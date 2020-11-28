@@ -4,4 +4,5 @@ const AUTH_API = "/api/v2/auth"
 
 module.exports = (app) => {
     app.post(AUTH_API, (req, res) => auth.login(req, res))
+    app.get(AUTH_API, (req, res) =>  auth.getProfile(req, res))
 }

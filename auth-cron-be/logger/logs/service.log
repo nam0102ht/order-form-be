@@ -18,3 +18,12 @@
     at ServerDuplexStreamImpl.Writable.write (_stream_writable.js:315:5)
     at ServerDuplexStreamImpl.<anonymous> (C:\Users\Nam\Documents\GitHub\order-form-be\auth-cron-be\index.js:62:18)
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-11-28 09:27:05] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:05] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:05] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:06] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:07] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:08] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:11] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:16] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-28 09:27:24] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376

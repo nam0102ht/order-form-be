@@ -55,6 +55,7 @@ exports.insertOne = async (req, res) => {
     }
 
     if(userDetect){
+        response.status = backendErr.userExist
         response.message = "User is exists"
         res.send(response)
         return
