@@ -31114,3 +31114,52 @@
     at InterceptingListener._callNext (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:568:42)
     at InterceptingListener.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:618:8)
     at C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1127:18
+[2020-11-29 20:59:06] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:06] [[31merror[39m] SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-11-29 20:59:07] [[31merror[39m] Error: 14 UNAVAILABLE: failed to connect to all addresses
+    at Object.exports.createStatusError (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\common.js:91:15)
+    at ClientDuplexStream._emitStatusIfDone (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:233:26)
+    at ClientDuplexStream._receiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:211:8)
+    at Object.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1311:15)
+    at InterceptingListener._callNext (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:568:42)
+    at InterceptingListener.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:618:8)
+    at C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1127:18
+[2020-11-29 20:59:07] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:07] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:08] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:09] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:11] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:14] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:18] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 20:59:27] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 21:04:06] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-11-29 23:03:13] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:13] [[31merror[39m] SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-11-29 23:03:13] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:13] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:14] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:15] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:17] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:20] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:24] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:33] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:03:47] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:04:10] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:04:51] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-11-29 23:05:58] [[31merror[39m] Error: 14 UNAVAILABLE: TCP Read failed
+    at Object.exports.createStatusError (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\common.js:91:15)
+    at ClientDuplexStream._emitStatusIfDone (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:233:26)
+    at ClientDuplexStream._receiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:211:8)
+    at Object.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1311:15)
+    at InterceptingListener._callNext (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:568:42)
+    at InterceptingListener.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:618:8)
+    at C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1127:18

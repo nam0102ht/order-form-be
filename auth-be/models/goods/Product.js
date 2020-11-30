@@ -2,7 +2,6 @@ const db = require("../../utils/connectDB")
 const { DataTypes, Model } = require("sequelize");
 const logger = require("../../logger/winston");
 const Categories = require("./Categories");
-const configGDrive = require("../../utils/configGDrive");
 
 class Product extends Model {}
 

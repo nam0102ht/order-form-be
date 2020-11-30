@@ -69,7 +69,7 @@ exports.login = async (req, res) => {
     }})
 }
 
-exports.getProfile =async (req, res) => {
-    let user = await utils.tokenFromHeader(req, res)
+exports.getProfile =(req, res) => {
+    let user = utils.tokenFromHeader(req, res)
     res.send(user)
 } 

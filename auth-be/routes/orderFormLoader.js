@@ -1,5 +1,7 @@
 var protoLoader = require('@grpc/proto-loader');
+const Products = require('../models/goods_redis/Products');
 var productRedis = require("../models/goods_redis/Products");
+const ProductService = require('../service/ProductService');
 const { success } = require('../utils/backendError');
 const backendError = require('../utils/backendError');
 var utils = require("../utils/utils")
@@ -13,30 +15,29 @@ var packageDefinition = protoLoader.loadSync(PROTO_PATH, {
     objects: true
 })
 
+let listProduct = (call) => {
+    call.on("data", (value) => {
+        console.log("value: "+value)
+        ProductService.findAll().then(value => {
+            console.log(value)
+            call.write({
+                status: 200,
+                message: JSON.stringify(value)
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+    })
+    call.on("end", () => {
 
-let order = (call, callback) => {
-    let order =  call.request
-    if(!order) callback(null, {
-        status: backendError.notFound,
-        message: "Token is null"
     })
-    let user = utils.verifyTokenClient(order.token)
-    let product = {
-        ...order,
-        token: null
-    }
-    let insert = productRedis.insertProductsInRedis(user, product)
-    if(!insert) callback(null, {
-        status: backendError.invalidParam,
-        message: "Redis isn't insert"
-    })
-    callback(null, {
-        status: success,
-        message: "Success"
-    })
+    call.on("error", (err) => {
+        console.log(err)
+    }) 
+    call.end()
 }
 
 module.exports = {
     packageDefinition: packageDefinition,
-    order: order
+    listProduct: listProduct
 }

@@ -53,9 +53,50 @@ let verifyToken = async (token) => {
     return jwt.verify(token, PUBLIC_KEY_CLIENT, {algorithms: ['RS256']})
 }
 
-let tokenFromHeader = async (req, res) => {
-    let jsonRes = ""
-    return jsonRes
+let tokenFromHeader = (req, res) => {
+    const headers = req.headers
+    if(!headers) {
+        res.send({
+            status: errorBackend.invalidParam,
+            message: "Headers is null",
+            data: {}
+        })
+        return ""
+    }
+    let token = headers.authorization
+    console.log(token)
+    if(!token) {
+        res.send({
+            status: errorBackend.invalidParam,
+            message: "Token must have",
+            data: {}
+        })
+        return ""
+    }
+    let tokenBearer = token.split("Bearer ")
+    if(tokenBearer.length === 0) {
+        res.send({
+            status: errorBackend.invalidParam,
+            message: "Token is bad format",
+            data: {}
+        })
+        return ""
+    }
+    let jwtToken = tokenBearer[1]
+    console.log(jwtToken)
+    let jsonRes = verifyTokenClient(jwtToken)
+    if(!jsonRes) {
+        res.send({
+            status: errorBackend.invalidParam,
+            message: "Token is bad format"
+        })
+        return ""
+    }
+    return {
+        status: 200,
+        message: "Success",
+        data: jsonRes
+    }
 }
 
 let generateJwtWithRsaClient = async (user) => {
@@ -81,8 +122,8 @@ let generateJwtWithRsaClient = async (user) => {
     return token
 }
 
-let verifyTokenClient = async (token) => {
-    return await jwt.verify(token, PUBLIC_KEY_CLIENT)
+let verifyTokenClient = (token) => {
+    return jwt.verify(token, PUBLIC_KEY)
 }
 
 let tokenFromHeaderCookies = async (req, res) => {

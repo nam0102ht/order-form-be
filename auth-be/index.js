@@ -46,7 +46,7 @@ app.listen(PORT, () => {
     
     var orderFormProto = grpc.loadPackageDefinition(orderFormLoader.packageDefinition).orderForm;
     server.addService(orderFormProto.OrderForm.service, {
-        order: orderFormLoader.order
+        ListProduct: orderFormLoader.listProduct
     });
 
     grpcClient.ping();
