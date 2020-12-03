@@ -16,9 +16,9 @@ exports.login = async (req, res) => {
         data: {}
     }
     if(!body) {
-        logger.info("Body is null")
+        logger.info("username and password is null")
         response.status = backendErr.invalidParam
-        response.message = "Body is null"
+        response.message = "username and password is null"
         return
     }
     let username = body.username
@@ -26,7 +26,7 @@ exports.login = async (req, res) => {
     if(!username && !password) {
         logger.info("username and password is not null")
         response.status = backendErr.invalidParam
-        response.message = "Body is null"
+        response.message = "username and password is null"
         res.send(response)
         return
     }
