@@ -56,6 +56,10 @@ let count = (ping) => {
 }
 
 let getDate = (ping, password, res) => {
+    let response = {
+        status: 200,
+        message: "Success"
+    }
     let call = grpcClient.dateBlock()
     call.write(ping)
     call.on('data', async pong => {
@@ -83,7 +87,6 @@ let getDate = (ping, password, res) => {
             }
             return
         }
-        let response  = {}
         response.status = backendErr.userIsBlock
         response.message = pong.message
         res.send(response)

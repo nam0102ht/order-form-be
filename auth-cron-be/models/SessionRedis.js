@@ -37,6 +37,7 @@ let setCountSessionLogin = async (username) => {
         return 'set'
     }
     let obj = JSON.parse(userSession)
+    console.log(obj)
     let count = obj.count + 1
     if(count <=3 ) {
         clientRedis.DEL(session)

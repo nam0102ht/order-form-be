@@ -31,7 +31,16 @@ exports.login = async (req, res) => {
         return
     }
 
-    let userCheck = await UserService.findByUsername(username)
+    let userCheck = await UserService.findByUsername(username) || null
+    console.log(userCheck)
+    if(!userCheck) {
+        logger.info("User is not found")
+        response.status = 401
+        response.message = "User is not found"
+        response.data = {}
+        res.send(response)
+        return
+    }
     if(userCheck.isBlock) {
         logger.info("User is blocked")
         

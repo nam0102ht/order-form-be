@@ -31236,3 +31236,72 @@
     at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
     at listOnTimeout (internal/timers.js:554:17)
     at processTimers (internal/timers.js:497:7)
+[2020-12-04 18:38:11] [[31merror[39m] Error: 14 UNAVAILABLE: failed to connect to all addresses
+    at Object.exports.createStatusError (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\common.js:91:15)
+    at ClientDuplexStream._emitStatusIfDone (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:233:26)
+    at ClientDuplexStream._receiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:211:8)
+    at Object.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1311:15)
+    at InterceptingListener._callNext (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:568:42)
+    at InterceptingListener.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:618:8)
+    at C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1127:18
+[2020-12-04 18:43:11] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-12-04 18:48:11] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-12-04 18:53:11] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-12-04 18:58:11] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-12-04 19:03:11] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-12-04 19:08:11] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-12-04 19:13:11] [[31merror[39m] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at writeAfterEnd (_stream_writable.js:266:14)
+    at ClientDuplexStream.Writable.write (_stream_writable.js:315:5)
+    at Timeout._onTimeout (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\routes\GrpcRoutes.js:29:14)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+[2020-12-04 19:20:15] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-12-04 19:20:15] [[31merror[39m] SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-12-04 19:20:15] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-12-04 19:20:16] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-12-04 19:20:16] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-12-04 19:20:17] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-12-04 19:20:19] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-12-04 19:20:22] [[31merror[39m] Error Error: Redis connection to localhost:6376 failed - connect ECONNREFUSED 127.0.0.1:6376
+[2020-12-04 19:20:27] [[31merror[39m] Error AbortError: Ready check failed: Redis connection lost and command aborted. It might have been processed.
+[2020-12-04 19:23:41] [[31merror[39m] Error: 14 UNAVAILABLE: TCP Read failed
+    at Object.exports.createStatusError (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\common.js:91:15)
+    at ClientDuplexStream._emitStatusIfDone (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:233:26)
+    at ClientDuplexStream._receiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client.js:211:8)
+    at Object.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1311:15)
+    at InterceptingListener._callNext (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:568:42)
+    at InterceptingListener.onReceiveStatus (C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:618:8)
+    at C:\Users\Nam\Documents\GitHub\order-form-be\auth-be\node_modules\grpc\src\client_interceptors.js:1127:18
